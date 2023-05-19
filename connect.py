@@ -1,13 +1,4 @@
 from mongoengine import connect
-import configparser
 
 
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-mongo_user = config.get('DB', 'USER')
-mongodb_pass = config.get('DB', 'PASSWORD')
-db_name = config.get('DB', 'DB_NAME')
-domain = config.get('DB', 'DOMAIN')
-
-connect(host=f"""mongodb://{mongo_user}:{mongodb_pass}@{db_name}/{domain}?retryWrites=true&w=majority""", ssl=True)
+connect(host="mongodb+srv://ruslan:qwerty123@cluster.9diyzhg.mongodb.net/?retryWrites=true&w=majority")

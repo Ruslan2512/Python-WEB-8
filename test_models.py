@@ -1,16 +1,16 @@
 from mongoengine import *
 
-# connect(host="mongodb+srv://ruslan:qwerty123@web8.r3yh7e7.mongodb.net/?retryWrites=true&w=majority", ssl=True)
+connect(host="mongodb+srv://ruslan:qwerty123@cluster.9diyzhg.mongodb.net/?retryWrites=true&w=majority")
 
 
-class Author(EmbeddedDocument):
+class Author(Document):
     fullname = StringField()
-    born_date = DateTimeField()
+    born_date = StringField()
     born_location = StringField()
     description = StringField()
 
 
-class Qoutes(EmbeddedDocument):
+class Qoutes(Document):
     tags = ListField()
     author = StringField()
     quote = StringField()
