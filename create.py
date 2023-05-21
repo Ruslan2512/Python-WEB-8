@@ -14,3 +14,4 @@ qoutes = Qoutes(tags=['novelist', 'poet'],
 qoutes.save()
 
 
+
